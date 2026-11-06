@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday Taufik Hidayat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="gate">
+  <button class="pill" id="gateBtn" type="button">🎆 Ketuk untuk mulai</button>
+  <div id="candleBox" hidden>
+    <div class="candle" id="candle" role="button" tabindex="0" aria-label="Tiup lilin">
+      <i class="flame"></i><i class="wick"></i><b class="wax"></b>
+      <span class="smoke" style="--sx:-18px;animation-delay:.05s"></span><span class="smoke" style="--sx:14px;animation-delay:.3s"></span><span class="smoke" style="--sx:-4px;animation-delay:.6s"></span>
+    </div>
+    <p id="blowHint" aria-live="polite">Ketuk lilinnya untuk meniupnya 🌬️</p>
+  </div>
+</div>
+<button id="mute" type="button" aria-label="Matikan suara" hidden>🔊</button>
+
+<header class="hero">
+  <img class="bunting" src="img/banner.png" alt="Happy birthday bunting">
+  <div class="portrait tilt" data-depth="1">
+    <img src="img/user.png" alt="Taufik Hidayat">
+    <i class="spark s1">✦</i><i class="spark s2">✧</i><i class="spark s3">✦</i><i class="spark s4">✧</i>
+  </div>
+  <h1 class="typewrap" aria-live="polite"><span id="typewriter"></span><i class="cursor" aria-hidden="true"></i></h1>
+  <p class="hero-name">Taufik Hidayat</p>
+  <a class="scroll-hint" href="#letter" aria-label="Scroll to your letter">Scroll</a>
+</header>
+
+<main>
+  <section class="wrap" id="letter" data-r>
+    <div class="letter tilt">
+      <span class="heart" aria-hidden="true">❤️</span>
+      <h2>Hai Sayang Aku, Taufik Hidayat!</h2>
+      <p style="--d:.1s">----<strong></strong>----</p>
+      <p style="--d:.25s">Semoga Kamu Seneng Ya! <mark>Selamat ulang tahun!</mark>🎉🥳</p>
+      <p style="--d:.4s">Aku sudah menyiapkan sesuatu yang spesial khusus buatmu. Gass, gulir ke bawah dan nikmati kejutan-kejutan yang sudah aku siapkan! 🍁✨</p>
+      <p style="--d:.55s">Semoga harimu dipenuhi kebahagiaan, tawa, dan kenangan manis yang akan selalu kamu ingat. 🌺💖</p>
+      <p style="--d:.55s">Selamat bertambah usia! Semoga semua hal baik selalu menyertaimu Sayang. Love U.. ❤️🎂</p>
+    </div>
+  </section>
+
+  <section class="cake-sec wrap" data-r>
+    <div class="cake-stage"><span class="ring"></span><img class="cake" src="img/cake.svg" alt="Birthday cake"></div>
+    <button class="pill" id="wishBtn" type="button">Make a wish</button>
+    <p class="wish" id="wishMsg" aria-live="polite"></p>
+  </section>
+
+  <section class="memories wrap" data-r>
+    <h2 class="sec-title">Our old memories</h2>
+    <div class="stack" id="stack" aria-label="Photo memories">
+      <figure class="polaroid"><img src="img/1.jpeg" alt="Group selfie" draggable="false"><figcaption>👀</figcaption></figure>
+      <figure class="polaroid"><img src="img/2.jpeg" alt="Friends in class" draggable="false"><figcaption>Fav Person!</figcaption></figure>
+      <figure class="polaroid"><img src="img/3.jpg" alt="Friends on the steps" draggable="false"><figcaption>❤️</figcaption></figure>
+      <figure class="polaroid"><img src="img/4.jpg" alt="Friends lined up outside" draggable="false"><figcaption>ABG</figcaption></figure>
+    </div>
+    <div class="ctrl">
+      <button id="prevImg" class="round" aria-label="Previous photo">‹</button>
+      <span id="count" class="count">1 / 4</span>
+      <button id="nextImg" class="round" aria-label="Next photo">›</button>
+    </div>
+  </section>
+
+  <section class="final wrap" data-r>
+    <h2 class="sec-title">Kartu Ucapan</h2>
+    <div class="card-wrap tilt" id="cardContainer">
+      <div class="card" id="card">
+        <div class="side front">
+          <h3>Happy Birthday</h3>
+          <p>Tap tombol untuk buka kartu</p>
+          <img src="img/cake.svg" alt="">
+          <button class="pill dark" id="toggleButton" type="button">Buka Kartu</button>
+        </div>
+        <div class="side back">
+          <h3>Happy Birthday</h3>
+          <p>happy birthday, sayangku 🤍🎂❤️</p>
+          <p>semoga di usia barumu, kebahagiaan selalu menyertaimu dan semua impianmu menjadi nyata. terima kasih sudah hadir di hidupku. aku mungkin belum sempurna, tapi aku akan selalu berusaha mencintaimu dengan tulus.
+semoga aku masih menjadi orang yang bisa merayakan ulang tahunmu di tahun-tahun berikutnya.</p>
+          <p>i love you, always. ❤️♾️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-r>
+  <p>Thanks for visiting, stay awesome 🪔</p>
+  <small>Dibuat Dengan Kasih Sayang by Tio</small>
+</footer>
+<div id="lanterns" aria-hidden="true"></div>
+<script src="audio.js"></script>
+<script src="background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
